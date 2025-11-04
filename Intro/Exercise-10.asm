@@ -1,0 +1,19 @@
+ORG 2000H
+
+LDA 2800H 
+MOV B,A
+
+LDA 2801H 
+CMP B
+JC SMALLER 
+
+; A >= (2801H)
+MOV A,B
+STA 3000H     
+HLT          
+
+SMALLER:
+    STA 3000H
+    HLT
+
+END

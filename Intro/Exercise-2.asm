@@ -1,0 +1,12 @@
+ORG 2000H
+
+MOV B,H
+MOV C,L
+
+MOV H,D
+MOV L,E
+
+MOV D,B
+MOV E,C
+
+END
