@@ -1,0 +1,22 @@
+[O]2000                 ORG 2000H         
+[O]2000                 
+[C]2000 210028          LXI H, 2800H       
+[C]2003 0E10            MVI C, 10H         
+[C]2005 0600            MVI B, 00H         
+[O]2007                 
+[C]2007 7E              LOOP: MOV A, M     
+[C]2008 FE55                  CPI 55H       
+[C]200A C20E20                JNZ NEXT     
+[C]200D 04                    INR B        
+[O]200E                 
+[C]200E 23              NEXT: INX H       
+[C]200F 0D                    DCR C         
+[C]2010 C20720                JNZ LOOP      
+[O]2013                 
+[C]2013 76              HLT
+[O]2014                 END
+
+
+[LABELS]
+--------
+2007 = 'LOOP'		200E = 'NEXT'

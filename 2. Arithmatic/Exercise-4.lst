@@ -1,0 +1,20 @@
+[O]2000                 ORG 2000H           
+[O]2000                 
+[C]2000 215031          LXI H, 3150H      
+[C]2003 115032          LXI D, 3250H  
+[C]2006 0E10            MVI C, 10H         
+[O]2008                 
+[C]2008 7E              LOOP: MOV A, M     
+[C]2009 12                    STAX D    
+[C]200A 23                    INX H     
+[C]200B 13                    INX D       
+[C]200C 0D                    DCR C    
+[C]200D C20820                JNZ LOOP    
+[O]2010                 
+[C]2010 76              HLT             
+[O]2011                 END
+
+
+[LABELS]
+--------
+2008 = 'LOOP'

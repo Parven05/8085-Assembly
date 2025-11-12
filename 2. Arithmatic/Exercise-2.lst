@@ -1,0 +1,17 @@
+[O]2000                 ORG 2000H
+[O]2000                 
+[C]2000 210025          LXI H,2500H
+[C]2003 0611            MVI B,11H
+[O]2005                 
+[C]2005 3600            LOOP: 	MVI M, 00H
+[C]2007 23              	INX H
+[C]2008 05              	DCR B
+[C]2009 C20520          	JNZ LOOP
+[O]200C                 
+[C]200C 76              HLT
+[O]200D                 END
+
+
+[LABELS]
+--------
+2005 = 'LOOP'
