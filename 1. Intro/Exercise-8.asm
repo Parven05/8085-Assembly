@@ -1,0 +1,8 @@
+ORG 2000H
+
+XCHG  
+DAD B
+DAD D
+XCHG 
+
+END

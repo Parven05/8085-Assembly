@@ -1,0 +1,12 @@
+[O]2000                 ORG 2000H
+[O]2000                 
+[C]2000 EB              XCHG  
+[C]2001 09              DAD B
+[C]2002 19              DAD D
+[C]2003 EB              XCHG 
+[O]2004                 
+[O]2004                 END
+
+
+[LABELS]
+--------

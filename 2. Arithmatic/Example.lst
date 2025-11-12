@@ -1,0 +1,14 @@
+[O]2000                 ORG 2000H 
+[C]2000 31F03F          LXI SP,3FF0H 
+[C]2003 011110          LXI B,1011H 
+[C]2006 111312          LXI D,1213H 
+[C]2009 C5              PUSH B 
+[C]200A D5              PUSH D 
+[C]200B C1              POP B 
+[C]200C D1              POP D 
+[C]200D CF              RST 1 
+[O]200E                 END 
+
+
+[LABELS]
+--------
