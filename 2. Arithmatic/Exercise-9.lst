@@ -1,0 +1,27 @@
+[O]2000                 ORG 2000H
+[O]2000                 
+[C]2000 3A0028          LDA 2800H
+[C]2003 FE80            CPI 80H
+[C]2005 DA1320          JC LESS
+[C]2008 CA1B20          JZ EQUAL
+[C]200B 3EFF            MVI A, 0FFH
+[C]200D 321028          STA 2810H
+[C]2010 C32020          JMP ENDPROGRAM
+[O]2013                 
+[L]2013                 LESS:
+[C]2013 3E00            MVI A, 00H
+[C]2015 321028          STA 2810H
+[C]2018 C32020          JMP ENDPROGRAM
+[O]201B                 
+[L]201B                 EQUAL: 
+[C]201B 3E7F            MVI A, 7FH
+[C]201D 321028          STA 2810H
+[O]2020                 
+[L]2020                 ENDPROGRAM:
+[C]2020 76              HLT
+[O]2021                 END
+
+
+[LABELS]
+--------
+2013 = 'LESS'		201B = 'EQUAL'		2020 = 'ENDPROGRAM'

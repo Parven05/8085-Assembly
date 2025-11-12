@@ -11,7 +11,7 @@ LOOP: MOV A, M
 
 NEXT: INX H       
       DCR C         
-      JNZ LOOP      
+      JNZ LOOP
 
 HLT
 END
