@@ -1,0 +1,34 @@
+[O]2000                 ORG 2000H
+[O]2000                 
+[O]2000                 ; LSB
+[C]2000 3A0038          LDA 3800H
+[C]2003 47              MOV B,A
+[C]2004 3A0338          LDA 3803H
+[C]2007 80              ADD B
+[C]2008 321038          STA 3810H
+[O]200B                 
+[O]200B                 ; MIDDLE
+[C]200B 3A0138          LDA 3801H
+[C]200E 47              MOV B,A
+[C]200F 3A0438          LDA 3804H
+[C]2012 88              ADC B
+[C]2013 321138          STA 3811H
+[O]2016                 
+[O]2016                 ; MSB
+[C]2016 3A0238          LDA 3802H
+[C]2019 47              MOV B,A
+[C]201A 3A0538          LDA 3805H
+[C]201D 88              ADC B
+[C]201E 321238          STA 3812H
+[O]2021                 
+[O]2021                 ; CARRY
+[C]2021 3E00            MVI A, 00H
+[C]2023 8F              ADC A
+[C]2024 321338          STA 3813H
+[O]2027                 
+[C]2027 76              HLT
+[O]2028                 END
+
+
+[LABELS]
+--------
